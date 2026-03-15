@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blokus-like Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>ブロックス風ゲーム</h1>
+        <p class="subtitle">角でつなげて、辺ではつなげない。先に手詰まりになったらパス。</p>
+      </header>
+
+      <section class="status-panel">
+        <div id="turnInfo"></div>
+        <div id="message"></div>
+        <div id="score"></div>
+      </section>
+
+      <section class="controls">
+        <button id="rotateBtn">回転 ↻</button>
+        <button id="flipBtn">反転 ⇋</button>
+        <button id="passBtn">パス</button>
+        <button id="restartBtn">リスタート</button>
+      </section>
+
+      <section class="layout">
+        <div id="board" class="board" aria-label="20x20 board"></div>
+        <aside>
+          <h2>ピース選択</h2>
+          <div id="pieceList" class="piece-list"></div>
+          <p class="hint">操作: ピースを選択 → ボードをクリックで配置</p>
+          <p class="hint">最初の一手は自分の角（青:左上 / 黄:右下）に置く必要があります。</p>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
